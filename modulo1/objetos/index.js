@@ -73,15 +73,15 @@ const segundaPessoa = {
 function recebeObjetos (pessoa, segundaPessoa){
     return [
     pessoa.nome,
-    pessoa.nome.lenght,
+    pessoa.nome.length,
     pessoa.idade,
     pessoa.profissao,
-    pessoa.profissao.lenght,
+    pessoa.profissao.length,
     segundaPessoa.nome,
-    segundaPessoa.nome.lenght,
+    segundaPessoa.nome.length,
     segundaPessoa.idade,
     segundaPessoa.profissao,
-    segundaPessoa.profissao.lenght]
+    segundaPessoa.profissao.length]
 }
 
 console.log( recebeObjetos (pessoa, segundaPessoa))
