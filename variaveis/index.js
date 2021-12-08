@@ -17,7 +17,11 @@ valorDiaria
 
 // EXERCÍCIO DE ESCRITA DE CODIGO
 
+<<<<<<< HEAD
+/*// Exercício 1
+=======
 // Exercício 1
+>>>>>>> master
 
 //a
 let nome
@@ -74,5 +78,4 @@ c = a
 a = b
 b = c
 
-console.log(a)
-console.log(b)
+
