@@ -18,7 +18,7 @@ let primeiroNumero = prompt("Digite um numero!")
 let segundoNumero = prompt("Digite outro numero!")
 const soma = Number(primeiroNumero)+ Number(segundoNumero)
 console.log(soma)
-*/
+
 
 //EXERCICIOS DE ESCRITA DE CODIGO
 
@@ -69,4 +69,3 @@ const segundoNumero = Number(prompt("Digite outro número"))
 console.log("O primeiro numero é maior que segundo?", primeiroNumero > segundoNumero);
 console.log("O primeiro numero é igual ao segundo?", primeiroNumero === segundoNumero);
 console.log("O primeiro numero é divisível pelo segundo?", primeiroNumero % segundoNumero === 0);
-console.log("O segundo numero é divisível pelo primeiro?", segundoNumero % primeiroNumero === 0);
