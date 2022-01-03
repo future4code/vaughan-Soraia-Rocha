@@ -17,7 +17,6 @@ valorDiaria
 
 // EXERCÍCIO DE ESCRITA DE CODIGO
 
-/*// Exercício 1
 
 //a
 let nome
@@ -74,13 +73,4 @@ c = a
 a = b
 b = c
 
-console.log(a)
-console.log(b) */
 
-//DESAFIO
-
-const numero1 = prompt ("insira um numero")
-const numero2 = prompt ("insira outro numero")
-
-console.log(Number(numero1) + Number (numero2))
-console.log(Number(numero1) * Number (numero2))
