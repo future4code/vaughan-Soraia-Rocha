@@ -18,24 +18,27 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  let arrayOrdenado = array.sort()
-        return arrayOrdenado
-}
-
+    return array.sort((a, b) => a - b)
+  }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-       let numerosPares = array.filter(array[i] % 2 === 0)
-        return numerosPares
-  
+  const numerosPares = array.filter((numeroPar) => {
+    return numeroPar % 2 === 0})
+  return numerosPares
 }
 
 // EXERCÍCIO 05
-function retornaNumerosParesElevadosADois(array) {
-        let numerosPares = array.filter(array.length[i] % 2===0)
-        return numerosPares*numerosPares
-   
- }
+
+ function retornaNumerosParesElevadosADois(array) {
+  const numerosPares = array.filter((numeroPar) => {
+    return numeroPar % 2 === 0;
+  });
+  const paresElevadosA2 = numerosPares.map((numerosElevados) => {
+    return Math.pow(numerosElevados, 2);
+  });
+  return paresElevadosA2;
+}
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
@@ -75,8 +78,14 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-    let primeirosPares
-   
+  let primeirosPares = [];
+
+  for (let i = 0; primeirosPares.length < n; i++) {
+    if (i % 2 === 0) {
+      primeirosPares.push(i);
+    }
+  }
+  return primeirosPares;
 }
 
 // EXERCÍCIO 09
@@ -96,12 +105,12 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  let organizaArray = array.length.sort()
-  let segundoMenor = organizaArray[1]
-  let verSegundoMaior = organizaArray.length-1
-  let segMaior = verSegundoMaior.pop()
-  let segundoMaior = segMaior.length-1
-  return segundoMaior, segundoMenor
+  const arrayOrdenado = array.sort((a, b) => a - b)
+   let segundoMaiorEsegundoMenor = []
+       segundoMaiorEsegundoMenor.push(arrayOrdenado[arrayOrdenado.length - 2])
+       segundoMaiorEsegundoMenor.push(arrayOrdenado[1])
+
+  return segundoMaiorEsegundoMenor
 }
 
 // EXERCÍCIO 11
@@ -144,18 +153,35 @@ function retornaPessoasNaoAutorizadas(pessoas) {
         pessoasNaoAutorizadas.push(pessoaNaoAuto);
       }
     }
-    return pessoasNaoAutorizadas;
+    return pessoasNaoAutorizadas
   }
 
 
 // EXERCÍCIO 14
-function retornaContasComSaldoAtualizado(contas) {
+  function retornaContasComSaldoAtualizado(contas) {
+    let soma = 0
+  
+    for (let conta of contas) {
+      for (let totalCompras of conta.compras) {
+        soma += totalCompras
+      }
+      conta.saldoTotal -= soma
+      conta.compras = []
+    }
+    return contas
+  }
 
-}
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  consultas.sort((a, b) => {
+    if (a.nome < b.nome) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  return consultas
 }
 
 // EXERCÍCIO 15B
