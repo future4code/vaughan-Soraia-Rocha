@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Adicionar Produto</title>
+</head>
+<body>
+    <div>
+        <p>Soraia Decorações</p>
+    </div>
+    
+    <div class="nav">
+      <a class="nav-link" href="index.html"> <button>Página Inicial</button></a>
+      <a class="nav-link" href="ctrl-estoque.html"> <button>Controle de Estoque</button> </a>
+      <a class="nav-link" href="add-produto.html"> <button>Adicionar Produto</button> </a>
+      <a class="nav-link" href="funcionarios.html"> <button>Funcionários</button> </a>
+    </div>
+
+    
+    <h2>Adicionar Produto</h2>
+    <form class="form-page" action="">
+        <div class="form-product">
+          <label for="link-foto">Link para foto: </label>
+          <input type="url" class="questions-product" name="link-foto" />
+        </div>
+  
+        <div class="form-product">
+          <label for="descricao">Descrição do produto: </label>
+          <!-- Adicione o id apropriado para o input abaixo -->
+          <input type="text" class="questions-product" name="descrição" />
+        </div>
+  
+        <div class="form-product">
+          <label for="preco">Preço (em R$): </label>
+          <!-- Adicione o id apropriado e o type para receber números abaixo -->
+          <input type="number" min="10.00" max="1000.00" step="0.01" class="questions-product" name="preço"/>
+        </div>
+  
+        <div class="form-product">
+          <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+          <label>Quantidade disponível: </label>
+          <input type="number" class="questions-product" name="quantidade" />
+        </div>
+  
+        <div class="form-product">
+          <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+          <label>Seção: </label>
+          <select class="questions-product" class="questions-product">
+            <option></option>
+            <option>Produtos para a casa</option>
+        </select>
+        </div>
+  
+        <div class="form-add">
+          <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
+          <button type="submit">Adicionar</button>
+        </div>
+      </form>
+
+</body>
+</html>

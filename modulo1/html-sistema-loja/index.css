@@ -1,0 +1,15 @@
+body {background-color: rgb(243, 209, 97);}
+h1{color: green; }
+h2,h3 {color: rgb(6, 6, 92);}
+p {font-weight: bold;}
+button {color: rgb(23, 80, 6);
+background-color: rgb(248, 233, 25);}
+
+table th {
+    border-collapse: collapse; 
+    
+}
+ table td {
+    border: 1px solid rgb(1, 61, 4);
+}
+ 
