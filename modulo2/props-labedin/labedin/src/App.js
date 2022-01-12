@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import foto.jpeg from '/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/foto.jpeg'
-import balança.png from '/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/balanca.png'
+import balanca.png from '/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/balanca.png'
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/foto.jpeg"
+          imagem= {foto.peg}
           nome="Soraia Rocha" 
           descricao="Oi, eu sou Soraia Rocha, estudante de programação e advogada nas horas vagas."
         />
@@ -26,9 +26,9 @@ function App() {
         <h2>Experiências profissionais</h2>
         
         <CardGrande 
-          imagem= "/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/balanca.png"
+          imagem= {balanca.png}
           nome="Advogada" 
-          descricao="causar" 
+          descricao="Resolver conflitos" 
         />
       </div>
 
