@@ -1,19 +1,26 @@
 import React from 'react';
 import './App.css';
-import foto.jpeg from '/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/foto.jpeg'
-import balanca.png from '/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/props-labedin/labedin/src/balanca.png'
+import CardGrande from './components/CardGrande/CardGrande';
+import ImagemButton from './components/ImagemButton/ImagemButton';
+import foto from "./foto.jpeg"
+import balanca from "./balanca.png"
+import styled from 'styled-components';
 
+const AppContainer= styled.div`
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; `
 
 function App() {
-  
   return (
-    <div className="App">
+    <AppContainer>
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem= {foto.peg}
+          imagem={foto}
           nome="Soraia Rocha" 
-          descricao="Oi, eu sou Soraia Rocha, estudante de programação e advogada nas horas vagas."
+          descricao="Meu nome é Soraia Rocha e sou estudante de programação."
         />
         
         <ImagemButton 
@@ -24,11 +31,13 @@ function App() {
 
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
-        
         <CardGrande 
-          imagem= {balanca.png}
+          imagem="{balanca}" 
           nome="Advogada" 
-          descricao="Resolver conflitos" 
+          descricao="Resolução de conflitos" 
+        />
+        
+      
         />
       </div>
 
@@ -44,7 +53,7 @@ function App() {
           texto="Twitter" 
         />        
       </div>
-    </div>
+      </AppContainer>
   );
 }
 
