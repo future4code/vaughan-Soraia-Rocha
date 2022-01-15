@@ -30,7 +30,7 @@ const MessageInput = styled.input`
   flex-grow: 1;
 `
 
-class Whats extends React.Component {
+class WhatsLabApp extends React.Component {
   state = {
     messages: [],
     userValue: '',
@@ -84,4 +84,4 @@ class Whats extends React.Component {
   }
 }
 
-export default App;
+export default WhatsLabApp;
