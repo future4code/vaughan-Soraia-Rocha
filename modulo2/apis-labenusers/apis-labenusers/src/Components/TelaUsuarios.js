@@ -102,7 +102,7 @@ class usuarios extends React.Component {
                     <DeleteButton
                       onClick={() => this.handleUserDeletion(user.id)}
                     >
-                      X
+                      
                     </DeleteButton>
                   </li>
                 );
