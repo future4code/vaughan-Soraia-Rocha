@@ -4,15 +4,53 @@ import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import foto from "./foto.jpeg"
 import balanca from "./balanca.png"
-import CardPequrno from "./components/CardPequeno/CardPequeno.js"
+import CardPequeno from "./components/cardPequeno/CardPequeno.js"
+import styled from 'styled-components';
+
+const AppContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+`
+const ButtonContainer= styled.div`
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 15px 30px;
+  width: 30px;
+   border-radius: 50%;
+  width: 70px;
+  flex-direction: column;
+  justify-items: flex-start;
+  `
+
+const CardGrandeContainer = styled.div `
+  display: flex;
+  align-items: center;
+  
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  height: 200px;
+
+  flex-direction: column;
+  justify-items: flex-start;
+  width: 70px;
+  margin-right: 10px;
+  border-radius: 50%;
+  `
+const CardPEquenoContainer = styled.div `
+  aligne.items:center;
+`
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="/home/soraia/LABENU/vaughan-Soraia-Rocha/modulo2/propsLabedin/labedin/src/balanca.png" 
+          imagem= {foto} 
           nome="Soraia" 
           descricao="Oi, meu nome é Soraia. Sou advogada e dev nas horas vagas."
         />
@@ -22,35 +60,38 @@ function App() {
         />
       </div>
 
-      <div className="page-section-container">
+      <CardGrandeContainer>
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem= {foto} 
+          imagem= {balanca} 
           nome="Advogada" 
           descricao="Resolver tretas!" 
         />
-      </div>
+      </CardGrandeContainer>
 
-      <div className="page-section-container">
+
+      <ButtonContainer>
         <h2>Minhas redes sociais</h2>
         <ImagemButton 
-          imagem={balanca} 
+          imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"  
           texto="Facebook" 
         />        
         <ImagemButton 
           imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
           texto="Twitter" 
         />        
-      </div>
+      </ButtonContainer>
       
-      <div className="CardPequeno-container">
+
+      <CardPEquenoContainer>
         <h2>Contatos</h2>
-        <CardPequrno 
+        <CardPequeno 
           email="soraia@gmail.com" 
-          telefone="123456" 
+          telefone="123 456 789" 
         />     
-        </div> 
-    </div>
+        </CardPEquenoContainer > 
+
+    </AppContainer>
   );
 }
 
