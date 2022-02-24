@@ -1,12 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Etapa1 from "./components/Etapa1";
+import Etapa2 from "./components/Etapa2";
+import Etapa3 from "./components/Etapa3";
+import Final from "./components/Final";
+import styled from "styled-components";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+const AppContainer = styled.div`
+{
+  font-family: sans-serif;
+  text-align: center;
+} `
+
+class App extends React.Component {
+  state = {
+      etapa: 1
+  };
+
+  renderizaEtapa = () => {
+    switch (this.state.etapa) {
+      case 1:
+        return <Etapa1 />;
+      case 2:
+        return <Etapa2 />;
+      case 3:
+        return <Etapa3 />;
+      case 4:
+        return <Final />;
+      default:
+        return <Final />;
+    }
+  };
+
+  proximaEtapa = () => {
+    this.setState({ etapa: this.state.etapa + 1 });
+  };
+
+  render() {
+    return (
+      <AppContainer>
+        {this.renderizaEtapa()}
+        <br />
+        {this.state.etapa !== 4 && (
+          <button onClick={this.proximaEtapa}>Próxima etapa</button>
+        )}
+      </AppContainer>
+    );
+  }
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
