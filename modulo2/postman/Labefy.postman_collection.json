@@ -21,12 +21,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "soraiaRocha- Vaughan",
+						"value": "soraia-rocha- vaughan",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists\n\n",
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
 					"protocol": "https",
 					"host": [
 						"us-central1-labenu-apis",
@@ -35,7 +35,7 @@
 					],
 					"path": [
 						"labefy",
-						"playlists\n\n"
+						"playlists"
 					]
 				}
 			},
@@ -48,13 +48,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "soraiaRocha-Vaughan",
+						"value": "soraia-rocha-vaughan",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"name\": \"SoraiaMPB\" \n   \"genero\": \"MPB\"\n}",
+					"raw": "{\n     \"name\": \"soraiaRock\", \n    \"artist\": \"rockNacional\",\n    \"url\": \"string\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
