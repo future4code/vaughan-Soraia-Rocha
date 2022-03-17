@@ -1,5 +1,6 @@
 import React from "react"
 import TelaCadastro from "./Components/TelaCadastro"
+import ListaUsuarios from "./Components/ListaUsuarios"
 
 
 export default class App extends React.Component {
@@ -7,7 +8,7 @@ export default class App extends React.Component {
     telaAtual: "cadastro"
   };
 
-  escolheTela = () => {
+  changePage = () => {
     if (this.state.telaAtual === "cadastro") {
       this.setState({ telaAtual: "usuarios" });
     } else {
@@ -19,7 +20,7 @@ export default class App extends React.Component {
     return (
       <div>
         <button onClick={this.changePage}>Trocar de tela</button>
-        {this.state.telaAtual === "cadastro" ? <TelaCadastro /> : <users />}
+        {this.state.telaAtual === "cadastro" ? <TelaCadastro /> : <usuários/>}
       </div>
     );
   }

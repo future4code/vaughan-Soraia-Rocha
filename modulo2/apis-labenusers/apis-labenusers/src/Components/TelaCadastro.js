@@ -1,11 +1,25 @@
 import React from "react";
 import axios from "axios";
+import styledComponents from "styled-components";
+
 
 class TelaCadastro extends React.Component {
     state = {
       name: "",
-      email: ""
+      email: "",
+      inputValue:""
     };
+
+
+  componentDidMount(){
+    this.handleCreateUser()
+  }
+
+  handleInput=(event)=>{
+    this.setState({inputValue:event.target.value})
+
+
+  }
   
     handleName = event => {
       const newNameValue = event.target.value;
@@ -20,26 +34,30 @@ class TelaCadastro extends React.Component {
     };
   
     handleCreateUser = () => {
-      const axiosConfig = {
+      const dadosAxios = {
         headers: {
           Authorization: "soraia-rocha-vaughan"
         }
       };
   
       const body = {
-        name: this.state.name,
-        email: this.state.email
+        name: this.state.inputValue,
+        email: this.state.inputValue
+        
       };
+
+      const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
   
       axios
         .post(
-          "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+          url,
           body,
-          axiosConfig
+         dadosAxios
         )
+
         .then(() => {
           alert(`Usuário ${this.state.name} criado com sucesso!`);
-          this.setState({ name: "", email: "" });
+          this.setState({inputValue:""})
         })
         .catch(error => {
           alert("Erro ao criar o usuário");
@@ -53,16 +71,17 @@ class TelaCadastro extends React.Component {
           <input
             placeholder="Nome"
             type="text"
-            value={this.state.name}
+            value={this.state.inputValue}
             onChange={this.handleNameChange}
           />
           <input
             placeholder="E-mail"
             type="email"
-            value={this.state.email}
             onChange={this.handleEmailChange}
+            value={this.state.inputValue}
           />
           <button onClick={this.handleCreateUser}>Criar Usuário</button>
+          
         </div>
       );
     }
